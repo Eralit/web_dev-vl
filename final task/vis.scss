@@ -1,0 +1,305 @@
+$bg-main: #1E1E24;
+$bg-card: #2B2C33;
+$bg-lighter: #34353E;
+$accent: #FFB400; 
+$text-light: #FFFFFF;
+$text-muted: #A0A1A7;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $bg-main;
+    color: $text-light;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.text-accent { color: $accent; }
+.bg-accent { background-color: $accent; }
+
+.btn-accent {
+    background-color: $accent;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s;
+    &:hover {
+        background-color: darken($accent, 10%);
+        color: #000;
+    }
+}
+
+.section-tag {
+    display: inline-block;
+    background-color: $bg-lighter;
+    color: $accent;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    background-color: rgba($bg-main, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+
+    .logo-placeholder {
+        width: 40px;
+        height: 40px;
+        background-color: $accent;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .nav-link {
+        color: $text-light !important;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: 0.3s;
+        
+        &:hover, &.active {
+            color: $accent !important;
+        }
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    padding-top: 100px;
+    
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        span { color: $accent; }
+    }
+    
+    &__title {
+        font-size: 52px;
+        font-weight: 700;
+        max-width: 800px;
+        margin: 0 auto 20px;
+        @media (max-width: 768px) { font-size: 36px; }
+    }
+    
+    &__desc {
+        color: $text-muted;
+        font-size: 16px;
+    }
+
+    &__avatar-wrapper {
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid $bg-main;
+
+        .hero__avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.stats {
+    .stat-card {
+        background-color: $bg-card;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s;
+
+        &:hover { transform: translateY(-5px); }
+
+        &__icon {
+            width: 50px;
+            height: 50px;
+            background-color: $bg-lighter;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            &::after { content: '⭐'; font-size: 20px; }
+            img { display: none; }
+        }
+
+        &__info {
+            h4 {
+                color: $accent;
+                margin-bottom: 0;
+                font-size: 24px;
+            }
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+                color: $text-light;
+            }
+        }
+    }
+}
+
+.about {
+    &__image-wrapper {
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+        overflow: hidden;
+        .about__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.skills {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skill-box {
+            background-color: $bg-card;
+            border-radius: 10px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+            border: 2px dashed $bg-lighter;
+
+            &:hover {
+                transform: translateY(-5px);
+                background-color: $bg-lighter;
+            }
+
+            img {
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.portfolio {
+    &__item {
+        background-color: $bg-card;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 300px;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after { content: 'Image Placeholder'; color: $text-muted; }
+
+        img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+    }
+}
+
+.testimonials {
+    .testimonial-card {
+        background-color: $text-light;
+        border-radius: 10px;
+        padding: 30px;
+        height: 100%;
+        
+        .text-muted { color: #6c757d !important; }
+        
+        .client {
+            &__avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $bg-lighter;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            h5 { color: #212529 !important; font-size: 16px; }
+            small { color: #6c757d !important; font-size: 12px; }
+        }
+    }
+
+    .dots {
+        .dot {
+            display: inline-block;
+            width: 25px;
+            height: 6px;
+            background-color: $bg-lighter;
+            border-radius: 10px;
+            margin: 0 5px;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &.active {
+                background-color: $accent;
+                width: 40px;
+            }
+        }
+    }
+}
+
+.cta {
+    &__box {
+        background-color: $accent;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba($accent, 0.2);
+    }
+}
+
+.footer {
+    .newsletter-input {
+        input {
+            &:focus {
+                box-shadow: none;
+                border-color: $accent;
+            }
+        }
+    }
+}
