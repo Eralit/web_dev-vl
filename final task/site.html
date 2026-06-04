@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartik Bansal - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <link rel="stylesheet" href="vis.css">
+    
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .portfolio-grid .portfolio__item:nth-child(1) { grid-row: span 2; height: 100%; }
+        .portfolio-grid .portfolio__item:nth-child(2) { height: 250px; }
+        .portfolio-grid .portfolio__item:nth-child(3) { height: 250px; }
+        .portfolio-grid .portfolio__item:nth-child(4) { height: 350px; grid-column: span 2; }
+        @media (max-width: 768px) {
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-grid .portfolio__item:nth-child(1), .portfolio-grid .portfolio__item:nth-child(4) { grid-column: span 1; }
+        }
+        .nav-pills .nav-link { color: #fff; cursor: pointer; }
+        .nav-pills .nav-link.active { background-color: #FFB400; color: #000; font-weight: 600; }
+        .text-gray { color: #A0A1A7; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top animate__animated animate__fadeInDown">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-placeholder me-2 d-flex justify-content-center align-items-center text-dark fw-bold">&lt;&gt;</div>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-accent" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-block">
+                <button class="btn btn-accent rounded-pill px-4 py-2">Hire Me</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h2 class="hero__subtitle animate__animated animate__fadeInDown animate__delay-1s">
+                Hi, I Am <span>Alexandr Novak</span> 👋
+            </h2>
+            <h1 class="hero__title animate__animated animate__zoomIn">
+                Creative Designer & Front-End Developer
+            </h1>
+            <p class="hero__desc mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+                I Design And Code Beautifully Simple Things, And I Love What I Do.
+            </p>
+            <div class="hero__avatar-wrapper animate__animated animate__bounceIn animate__delay-2s">
+                <img src="images/avataaars 1.png" alt="Kartik Bansal" class="hero__avatar" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center animate__animated animate__fadeInUp">
+                <div class="col-md-4 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-card__icon"></div>
+                        <div class="stat-card__info">
+                            <h4>5+</h4>
+                            <p>Years Of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-card__icon"></div>
+                        <div class="stat-card__info">
+                            <h4>100+</h4>
+                            <p>Completed Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-card__icon"></div>
+                        <div class="stat-card__info">
+                            <h4>50+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <div class="about__image-wrapper">
+                        <img src="images/Group 12.png" alt="About Me" class="about__img" onerror="this.style.display='none'">
+                    </div>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <span class="section-tag mb-2">WHO I AM</span>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="text-gray mb-4">
+                        Hi! I'm Alexandr Novak, and I'm a designer & developer who has passion for building clean web applications with intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I'm always curious about learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have worked with creative teams, which involves daily stand-ups and communications, source control, and project management.
+                    </p>
+                    <button class="btn btn-accent rounded-pill px-4 py-2">Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-5 animate__animated animate__fadeInLeft">
+                    <span class="section-tag mb-2">MY SKILLS</span>
+                    <h2 class="section-title">What My Programming Skills Included?</h2>
+                    <p class="text-gray mb-4">
+                        I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.
+                    </p>
+                    <button class="btn btn-accent rounded-pill px-4 py-2">Hire Me</button>
+                </div>
+                <div class="col-md-7 animate__animated animate__fadeInRight">
+                    <div class="skills__grid">
+                        <div class="skill-box"><img src="images/vscode-icons_file-type-html.png" alt="HTML" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/vscode-icons_file-type-css.png" alt="CSS" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_javascript.png" alt="JS" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/image 1.png" alt="Git" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_bootstrap.png" alt="Bootstrap" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/image 2.png" alt="XD" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_sass.png" alt="Sass" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_typescript-icon.png" alt="TS" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_python.png" alt="Python" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/bxl_tailwind-css.png" alt="Tailwind" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/logos_figma.png" alt="Figma" onerror="this.style.display='none'"></div>
+                        <div class="skill-box"><img src="images/akar-icons_github-fill.png" alt="GitHub" onerror="this.style.display='none'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio py-5 my-5 text-center">
+        <div class="container">
+            <span class="section-tag mb-2">MY WORKS</span>
+            <h2 class="section-title text-center mb-4">Featured Works</h2>
+            
+            <ul class="nav nav-pills justify-content-center mb-5 gap-3">
+                <li class="nav-item"><a class="nav-link active rounded-pill px-4">All</a></li>
+                <li class="nav-item"><a class="nav-link rounded-pill">Mobile App</a></li>
+                <li class="nav-item"><a class="nav-link rounded-pill">Website Design</a></li>
+                <li class="nav-item"><a class="nav-link rounded-pill">Website Development</a></li>
+            </ul>
+
+            <div class="portfolio-grid text-start">
+                <div class="portfolio__item animate__animated animate__zoomIn"><img src="images/Cover.png" alt="Project 1"></div>
+                <div class="portfolio__item animate__animated animate__zoomIn animate__delay-1s"><img src="images/Frame 36661.png" alt="Project 2"></div>
+                <div class="portfolio__item animate__animated animate__zoomIn animate__delay-2s"><img src="images/Homepage 1.png" alt="Project 3"></div>
+                <div class="portfolio__item animate__animated animate__zoomIn animate__delay-3s"><img src="images/Frame 36660.png" alt="Project 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5 my-5 text-center">
+        <div class="container">
+            <span class="section-tag mb-2">TESTIMONIALS</span>
+            <h2 class="section-title text-center mb-5">What Customer Says</h2>
+            
+            <div class="row g-4 text-start">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="text-accent mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
+                        <div class="client d-flex align-items-center">
+                            <div class="client__avatar me-3">
+                                <img src="images/33.jpg" alt="Client" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h5 class="mb-0 fw-bold">Liam Petrov</h5>
+                                <small>Designer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="text-accent mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
+                        <div class="client d-flex align-items-center">
+                            <div class="client__avatar me-3">
+                                <img src="images/33.jpg" alt="Client" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h5 class="mb-0 fw-bold">Liam Petrov</h5>
+                                <small>Designer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="text-accent mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
+                        <div class="client d-flex align-items-center">
+                            <div class="client__avatar me-3">
+                                <img src="images/33.jpg" alt="Client" onerror="this.style.display='none'">
+                            </div>
+                            <div>
+                                <h5 class="mb-0 fw-bold">Khushi Gupta</h5>
+                                <small>Designer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dots mt-4">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta pb-5 text-dark">
+        <div class="container">
+            <div class="cta__box p-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <h2 class="fw-bold mb-3 mb-md-0">Start a project</h2>
+                <p class="mb-3 mb-md-0 text-center px-4 fw-medium">Interested in working together? We should queue up a chat. I'll buy the coffee.</p>
+                <button class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">Let's do this</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5 mt-5 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4 text-start">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-accent fw-bold mb-3">Alexandr Novak.</h4>
+                    <p class="text-gray small">Creative designer & front-end developer</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Useful Links</h6>
+                    <ul class="list-unstyled text-gray small lh-lg">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Skills</li>
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Social Media</h6>
+                    <ul class="list-unstyled text-gray small lh-lg">
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                        <li>Dribbble</li>
+                        <li>Behance</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <p class="text-gray small">Enter your email and get notified about news, of.</p>
+                    <div class="input-group newsletter-input rounded-pill overflow-hidden" style="background-color: #2B2C33;">
+                        <input type="email" class="form-control border-0 bg-transparent text-white shadow-none ps-3" placeholder="Your email address">
+                        <button class="btn btn-accent rounded-circle m-1 d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                            ▶
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
